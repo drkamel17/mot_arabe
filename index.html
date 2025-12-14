@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة الكلمات العربية</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 لعبة الكلمات العربية</h1>
+            <p>اكتشف الكلمات المكونة من ثلاثة أحرف!</p>
+        </header>
+        
+        <main>
+            <div class="game-area">
+                <div class="score-board">
+                    <span>النقاط: </span>
+                    <span id="score">0</span>
+                </div>
+                
+                <div class="input-section">
+                    <label for="word-input">اكتب كلمة من ثلاثة أحرف:</label>
+                    <input type="text" id="word-input" maxlength="3" placeholder="مثال: كتب">
+                    <button id="check-btn">تحقق ✅</button>
+                </div>
+                
+                <div class="result-area" id="result-area">
+                    <!-- Results will appear here -->
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>لعبة تعليمية للأطفال - المرحلة الابتدائية</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+/* styles.css - Styles for the Arabic Word Game */
+
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6ecbf5, #c2e9fb);
+    color: #333;
+    direction: rtl;
+    text-align: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 20px;
+}
+
+/* Header styles */
+header {
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #ff6b6b;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #4a90e2;
+}
+
+/* Game area styles */
+.game-area {
+    background: linear-gradient(to bottom, #ffd166, #ffb347);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.score-board {
+    background-color: #06d6a0;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Input section styles */
+.input-section {
+    margin-bottom: 25px;
+}
+
+.input-section label {
+    display: block;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #118ab2;
+    font-weight: bold;
+}
+
+#word-input {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 3px solid #4a90e2;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    direction: rtl;
+}
+
+#word-input:focus {
+    outline: none;
+    border-color: #ff6b6b;
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+}
+
+#check-btn {
+    background: linear-gradient(to bottom, #06d6a0, #05b38a);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#check-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(to bottom, #05b38a, #049a75);
+}
+
+#check-btn:active {
+    transform: translateY(1px);
+}
+
+/* Result area styles */
+.result-area {
+    min-height: 100px;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.correct {
+    background: linear-gradient(to bottom, #06d6a0, #05b38a);
+    color: white;
+    animation: pulse 1s infinite;
+}
+
+.incorrect {
+    background: linear-gradient(to bottom, #ff6b6b, #ff5252);
+    color: white;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Footer styles */
+footer {
+    margin-top: 30px;
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .game-area {
+        padding: 15px;
+    }
+    
+    #word-input {
+        font-size: 1.2rem;
+        padding: 12px;
+    }
+    
+    #check-btn {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+    }
+}
