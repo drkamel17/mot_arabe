@@ -150,6 +150,152 @@ header p {
     100% { transform: scale(1); }
 }
 
+/* Teacher section styles */
+.teacher-section {
+    margin-top: 30px;
+    border-top: 2px dashed #4a90e2;
+    padding-top: 20px;
+}
+
+#toggle-teacher-panel {
+    background: linear-gradient(to bottom, #9b5de5, #7a4bbe);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#toggle-teacher-panel:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(to bottom, #7a4bbe, #5e3a9c);
+}
+
+.teacher-panel {
+    background: linear-gradient(to bottom, #f15bb5, #d43a90);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-panel.hidden {
+    display: none;
+}
+
+.teacher-panel h3 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.teacher-input-section label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+#new-word-input {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    font-size: 1.3rem;
+    text-align: center;
+    border: 3px solid #9b5de5;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+    direction: rtl;
+}
+
+#new-word-input:focus {
+    outline: none;
+    border-color: #f15bb5;
+    box-shadow: 0 0 10px rgba(241, 91, 181, 0.5);
+}
+
+#add-word-btn {
+    background: linear-gradient(to bottom, #00bbf9, #009fdb);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#add-word-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(to bottom, #009fdb, #0081b5);
+}
+
+/* Export/Import section styles */
+.export-import-section {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.export-import-section h3 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+#export-dictionary-btn, #import-dictionary-btn {
+    background: linear-gradient(to bottom, #fee440, #fccf00);
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+}
+
+#export-dictionary-btn:hover, #import-dictionary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(to bottom, #fccf00, #e6bb00);
+}
+
+.teacher-result-area {
+    min-height: 60px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    color: white;
+}
+
+.teacher-success {
+    background: linear-gradient(to bottom, #06d6a0, #05b38a);
+    animation: pulse 1s infinite;
+}
+
+.teacher-error {
+    background: linear-gradient(to bottom, #ff6b6b, #ff5252);
+}
+
 /* Footer styles */
 footer {
     margin-top: 30px;
@@ -179,5 +325,22 @@ footer {
     #check-btn {
         padding: 12px 25px;
         font-size: 1.1rem;
+    }
+    
+    #new-word-input {
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+    
+    #add-word-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    
+    #export-dictionary-btn, #import-dictionary-btn {
+        display: block;
+        margin: 10px auto;
+        padding: 8px 16px;
+        font-size: 0.9rem;
     }
 }
