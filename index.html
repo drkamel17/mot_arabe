@@ -29,6 +29,31 @@
                 <div class="result-area" id="result-area">
                     <!-- Results will appear here -->
                 </div>
+                
+                <!-- Teacher section -->
+                <div class="teacher-section">
+                    <button id="toggle-teacher-panel">👩‍🏫 لوحة المعلم</button>
+                    <div id="teacher-panel" class="teacher-panel hidden">
+                        <h3>إضافة كلمة جديدة إلى القاموس</h3>
+                        <div class="teacher-input-section">
+                            <label for="new-word-input">أدخل كلمة من ثلاثة أحرف:</label>
+                            <input type="text" id="new-word-input" maxlength="3" placeholder="مثال: شمس">
+                            <button id="add-word-btn">إضافة الكلمة ➕</button>
+                        </div>
+                        
+                        <!-- Export/Import section -->
+                        <div class="export-import-section">
+                            <h3>تصدير/استيراد القاموس</h3>
+                            <button id="export-dictionary-btn">تصدير القاموس 📤</button>
+                            <input type="file" id="import-dictionary-input" accept=".txt" style="display: none;">
+                            <button id="import-dictionary-btn">استيراد القاموس 📥</button>
+                        </div>
+                        
+                        <div class="teacher-result-area" id="teacher-result-area">
+                            <!-- Teacher results will appear here -->
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
         
