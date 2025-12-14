@@ -14,25 +14,24 @@ const scoreDisplay = document.getElementById('score');
 // This regex matches Arabic characters including letters and some diacritics
 const arabicRegex = /^[\u0621-\u064A\u0660-\u0669]+$/;
 
-// Predefined dictionary of valid 3-letter Arabic words
-const predefinedDictionary = [
-    'كتب', 'لعب', 'ذهب', 'جلس', 'فتح',
-    'علم', 'درس', 'قرأ', 'نام', 'أكل',
-    'شرب', 'ركض', 'سبح', 'غنى', 'رسم',
-    'قصة', 'قلم', 'كتاب', 'مدرسة', 'طالب'
-];
-
 /**
- * Initialize the game by setting up the dictionary
+ * Initialize the game by loading the dictionary
  */
-function initGame() {
+async function initGame() {
     try {
-        // Use the predefined dictionary
-        dictionary = predefinedDictionary;
+        // Fetch the dictionary file
+        const response = await fetch('words.txt');
+        const text = await response.text();
+        
+        // Split the text into an array of words
+        dictionary = text.trim().split('\n')
+            .map(word => word.trim())           // Remove extra whitespace
+            .filter(word => word.length > 0);   // Remove empty lines
+        
         console.log('Dictionary loaded:', dictionary);
     } catch (error) {
-        console.error('Error setting up dictionary:', error);
-        resultArea.innerHTML = '<p style="color: red;">خطأ في تحميل القاموس!</p>';
+        console.error('Error loading dictionary:', error);
+        resultArea.innerHTML = '<p style="color: red;">خطأ في تحميل القاموس! يرجى التأكد من وجود ملف words.txt</p>';
     }
 }
 
