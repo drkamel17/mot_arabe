@@ -206,14 +206,7 @@ function handleFileImport(event) {
             const importedWords = content.trim().split('\n')
                 .map(word => word.trim())
                 .filter(word => word.length > 0);
-            
-            // Validate that all words are 3 Arabic characters
-            const invalidWords = importedWords.filter(word => !isValidWordFormat(word));
-            if (invalidWords.length > 0) {
-                showTeacherResult(`الملف يحتوي على كلمات غير صالحة: ${invalidWords.join(', ')}`, 'teacher-error');
-                return;
-            }
-            
+                   
             // Update the dictionary
             dictionary = importedWords;
             
@@ -253,10 +246,10 @@ function checkWord() {
         return;
     }
     
-    if (!isValidWordFormat(word)) {
-        showResult('الكلمة يجب أن تكون مكونة من 3 أحرف عربية فقط!', 'incorrect');
-        return;
-    }
+    // if (!isValidWordFormat(word)) {
+        // showResult('الكلمة يجب أن تكون مكونة من 3 أحرف عربية فقط!', 'incorrect');
+        // return;
+    // }
     
     // Check if word is in dictionary
     if (isWordInDictionary(word)) {
